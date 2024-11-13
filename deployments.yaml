@@ -1,0 +1,102 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: produtor-de-graos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: produtor-de-graos
+  template:
+    metadata:
+      labels:
+        app: produtor-de-graos
+    spec:
+      containers:
+      - name: produtor-de-graos
+        image: usuario_dockerhub/produtor-de-graos:latest
+        ports:
+        - containerPort: 50051
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: produtor-de-agua
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: produtor-de-agua
+  template:
+    metadata:
+      labels:
+        app: produtor-de-agua
+    spec:
+      containers:
+      - name: produtor-de-agua
+        image: usuario_dockerhub/produtor-de-agua:latest
+        ports:
+        - containerPort: 50052
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: produtor-de-farinha
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: produtor-de-farinha
+  template:
+    metadata:
+      labels:
+        app: produtor-de-farinha
+    spec:
+      containers:
+      - name: produtor-de-farinha
+        image: usuario_dockerhub/produtor-de-farinha:latest
+        ports:
+        - containerPort: 50053
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: produtor-de-pao
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: produtor-de-pao
+  template:
+    metadata:
+      labels:
+        app: produtor-de-pao
+    spec:
+      containers:
+      - name: produtor-de-pao
+        image: usuario_dockerhub/produtor-de-pao:latest
+        ports:
+        - containerPort: 50054
+
+---
+# Deployment para o Client
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client
+  template:
+    metadata:
+      labels:
+        app: client
+    spec:
+      containers:
+      - name: client
+        image: usuario_dockerhub/client:latest
