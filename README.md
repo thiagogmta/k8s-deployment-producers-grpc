@@ -1,4 +1,4 @@
-# Kubernetes Deployment Manifests
+# Kubernetes Deployment Producers gRPC
 
 Este repositório contém arquivos de configuração YAML para o deployment e configuração dos serviços de um sistema distribuído de produtores de recursos usando gRPC em Go, que simula o fornecimento e consumo de itens como grãos, água, farinha e pão. Os manifestos incluem definições de `Deployment` e `Service` para cada microserviço, organizados para fácil aplicação e gerenciamento no cluster Kubernetes.
 
@@ -17,7 +17,7 @@ Este repositório contém arquivos de configuração YAML para o deployment e co
 1. Clone este repositório:
 
     ```bash
-    git clone https://github.com/seu_usuario/k8s-deployment-manifests.git
+    git clone https://github.com/thiagogmta/k8s-deployment-producers-grpc.git
     cd k8s-deployment-manifests
     ```
 
