@@ -21,18 +21,18 @@ Este repositório contém arquivos de configuração YAML para o deployment e co
     cd k8s-deployment-manifests
     ```
 
-2. Aplique o arquivo de Deployments:
-
-    ```bash
-    kubectl apply -f deployments.yaml
-    ```
-
-3. Aplique o arquivo de Services:
+2. Aplique o arquivo de Services:
 
     ```bash
     kubectl apply -f services.yaml
     ```
 
+3. Aplique o arquivo de Deployments:
+
+    ```bash
+    kubectl apply -f deployments.yaml
+    ```
+    
 4. Verifique se todos os Pods estão em execução:
 
     ```bash
