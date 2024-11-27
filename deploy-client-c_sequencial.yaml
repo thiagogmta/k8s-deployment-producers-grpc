@@ -1,0 +1,19 @@
+---
+# Deployment para client_carga_sequencial
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-carga-sequencial
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client-carga-sequencial
+  template:
+    metadata:
+      labels:
+        app: client-carga-sequencial
+    spec:
+      containers:
+      - name: client-carga-sequencial
+        image: usuario_dockerhub/client_carga_sequencial:latest

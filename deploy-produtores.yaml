@@ -80,23 +80,3 @@ spec:
         image: thiagogmta/produtor-de-pao:latest
         ports:
         - containerPort: 50054
-
----
-# Deployment para o Client
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: client
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: client
-  template:
-    metadata:
-      labels:
-        app: client
-    spec:
-      containers:
-      - name: client
-        image: thiagogmta/client:latest

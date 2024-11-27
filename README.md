@@ -12,7 +12,7 @@ Este repositório contém arquivos de configuração YAML para o deployment e co
 - Cluster Kubernetes ativo (local ou em nuvem).
     Você pode utilizar o projeto [kubebox](https://github.com/thiagogmta/kubebox) para implantar um cluster localmente.
 
-## Aplicação dos Manifestos
+## Aplicação dos Manifestos dos Produtores
 
 1. Clone este repositório:
 
@@ -30,7 +30,7 @@ Este repositório contém arquivos de configuração YAML para o deployment e co
 3. Aplique o arquivo de Deployments:
 
     ```bash
-    kubectl apply -f deployments.yaml
+    kubectl apply -f deploy-produtores.yaml
     ```
     
 4. Verifique se todos os Pods estão em execução:
@@ -43,4 +43,32 @@ Este repositório contém arquivos de configuração YAML para o deployment e co
 
     ```bash
     kubectl get services
+    ```
+
+## Testes
+
+Para realização dos testes devemos efetuar o deploy do manifesto referente ao teste que queremos executar sendo:
+
+1. Carga continua
+      
+    ```bash
+    kubectl apply -f deploy-client-c_continua.yaml
+    ```
+    
+2. Carga sequencial
+
+    ```bash
+    kubectl apply -f deploy-client-c_sequencial.yaml
+    ```
+
+3. Carga simples
+
+    ```bash
+    kubectl apply -f deploy-client-c_simples.yaml
+    ```
+
+4. Picos de carga
+
+    ```bash
+    kubectl apply -f deploy-client-p_carga.yaml
     ```

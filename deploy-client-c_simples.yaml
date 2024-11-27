@@ -1,0 +1,18 @@
+# Deployment para client_carga_simples
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-carga-simples
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client-carga-simples
+  template:
+    metadata:
+      labels:
+        app: client-carga-simples
+    spec:
+      containers:
+      - name: client-carga-simples
+        image: usuario_dockerhub/client_carga_simples:latest

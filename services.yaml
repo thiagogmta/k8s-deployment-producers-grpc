@@ -53,17 +53,3 @@ spec:
       targetPort: 50054
   clusterIP: None
 
----
-# Service para o Client (Opcional se for necessário expor o client para testes)
-apiVersion: v1
-kind: Service
-metadata:
-  name: client
-spec:
-  selector:
-    app: client
-  ports:
-    - protocol: TCP
-      port: 50055
-      targetPort: 50055
-  clusterIP: None

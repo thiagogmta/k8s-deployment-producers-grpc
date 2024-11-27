@@ -1,0 +1,18 @@
+# Deployment para client_picos_carga
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-picos-carga
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client-picos-carga
+  template:
+    metadata:
+      labels:
+        app: client-picos-carga
+    spec:
+      containers:
+      - name: client-picos-carga
+        image: usuario_dockerhub/client_picos_carga:latest

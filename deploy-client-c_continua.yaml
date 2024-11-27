@@ -1,0 +1,19 @@
+---
+# Deployment para client_carga_continua
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-carga-continua
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client-carga-continua
+  template:
+    metadata:
+      labels:
+        app: client-carga-continua
+    spec:
+      containers:
+      - name: client-carga-continua
+        image: usuario_dockerhub/client_carga_continua:latest
