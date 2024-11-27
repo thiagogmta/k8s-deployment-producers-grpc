@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: client-carga-simples
-        image: usuario_dockerhub/client_carga_simples:latest
+        image: thiagogmta/client_carga_simples:latest

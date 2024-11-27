@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: client-carga-continua
-        image: usuario_dockerhub/client_carga_continua:latest
+        image: thiagogmta/client_carga_continua:latest

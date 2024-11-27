@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: client-picos-carga
-        image: usuario_dockerhub/client_picos_carga:latest
+        image: thiagogmta/client_picos_carga:latest
